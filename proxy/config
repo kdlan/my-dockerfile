@@ -1,0 +1,26 @@
+# privoxy configuration
+
+user-manual /usr/share/doc/privoxy/user-manual
+confdir /etc/privoxy
+logdir /var/log/privoxy
+logfile privoxy.log
+
+listen-address  0.0.0.0:8118
+toggle  0
+enable-remote-toggle  0
+enable-remote-http-toggle  0
+enable-edit-actions 0
+enforce-blocks 0
+buffer-limit 4096
+forwarded-connect-retries  0
+accept-intercepted-requests 0
+allow-cgi-request-crunching 0
+split-large-forms 0
+keep-alive-timeout 0
+socket-timeout 60
+handle-as-empty-doc-returns-ok 1
+
+debug 512
+
+forward-socks5 / localhost:1234 .
+
