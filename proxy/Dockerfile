@@ -15,6 +15,7 @@ RUN pip install shadowsocks
 
 ADD squid.conf /etc/squid3/squid.conf
 ADD chinaip /etc/squid3/chinaip
+ADD gfw_domain /etc/squid3/gfw_domain
 ADD config /etc/privoxy/config
 
 EXPOSE 3128
